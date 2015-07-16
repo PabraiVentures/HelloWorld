@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +18,52 @@ public class MainActivity extends AppCompatActivity {
         String TAG = "MyData";
         Log.i(TAG, "myAge = " + myAge);
         Log.i(TAG, "myGPA = " + myGPA);
+        Toast.makeText(getApplicationContext(), "Calling onCreate()...", Toast. LENGTH_SHORT).show();
+
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Toast.makeText(getApplicationContext(), "Calling onStart()...", Toast. LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast.makeText(getApplicationContext(), "Calling onResume()...", Toast. LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Toast.makeText(getApplicationContext(), "Calling onPause()...", Toast. LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Toast.makeText(getApplicationContext(), "Calling onStop()...", Toast. LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Toast.makeText(getApplicationContext(), "Calling onRestart()...", Toast. LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Toast.makeText(getApplicationContext(), "Calling onDestroy()...", Toast. LENGTH_SHORT).show();
+
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
